@@ -4,7 +4,7 @@ import React from "react";
 import { useSelector , useDispatch} from 'react-redux'
 import { deleteFromCart , clearCart } from "../redux_toolkit/slices/cart/cartSlice";
 const CartPage = () => {
-   const cart = localStorage.key(0)
+   const cart = localStorage.key(1)
   const dispatch = useDispatch()
   let myPrice = 0;
   let myQuantity = 0;
