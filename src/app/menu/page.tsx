@@ -12,7 +12,7 @@ function MenuPage() {
       {
         menu.map((category)=>{
           return(
-            <Link href={`menu/${category.slug}`} key={category.id} className='w-full h-1/3 bg-cover p-8 md:h-1/2' style={{backgroundImage:`url(${category.img})`}}>
+            <Link href={`https://aesthetic-mousse-aa4e71.netlify.app/menu/${category.slug}`} key={category.id} className='w-full h-1/3 bg-cover p-8 md:h-1/2' style={{backgroundImage:`url(${category.img})`}}>
               <div className={`text-${category.color} w-1/2`}>
                 <h1 className='upper-case font-bold text-4xl'>{category.title}</h1>
                 <p className='text-sm my-5'>{category.desc}</p>

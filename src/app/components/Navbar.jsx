@@ -13,9 +13,9 @@ function Navbar() {
     <>
     <div className='flex justify-between my-5 lg:px-20 xl:px-40 md:h-24 z-10'>
       <div className=' hidden md:flex items-center gap-4'>
-        <div  className='cursor-pointer hover:text-red-500 transition-all duration-600'><Link href="/">Home Page</Link></div>
-        <div className='cursor-pointer hover:text-red-500 transition-all duration-600'><Link href="/menu">Menu</Link></div>
-        <div className='cursor-pointer hover:text-red-500 transition-all duration-600'><Link href="/">Contact</Link></div>
+        <div  className='cursor-pointer hover:text-red-500 transition-all duration-600'><Link href="https://aesthetic-mousse-aa4e71.netlify.app">Home Page</Link></div>
+        <div className='cursor-pointer hover:text-red-500 transition-all duration-600'><Link href="https://aesthetic-mousse-aa4e71.netlify.app/menu">Menu</Link></div>
+        <div className='cursor-pointer hover:text-red-500 transition-all duration-600'><Link href="https://aesthetic-mousse-aa4e71.netlify.app">Contact</Link></div>
       </div>
       <div className='text-blue-400 cursor-pointer transition-all duration-700 hover:text-blue-200' > <Link href="/">Usama Restaurant</Link>   </div>
 

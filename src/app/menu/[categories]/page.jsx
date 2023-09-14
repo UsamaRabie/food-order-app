@@ -24,7 +24,7 @@ function MenuCategoryPage({params}) {
             pizzas.map((item)=>{
               return(
                 <Link className='w-full md:w-1/2 lg:w-1/3 h-[60vh] border-2 border-red-500 m-auto group transition-all duration-700 odd:bg-fuchsia-100 even:bg-fuchsia-200' key={item.id} 
-                href={`/pizzas/${item.id}`}
+                href={`https://aesthetic-mousse-aa4e71.netlify.app/pizzas/${item.id}`}
                 >
   
                 {/**Image */}
@@ -49,7 +49,7 @@ function MenuCategoryPage({params}) {
               burgers.map((item)=>{
                 return(
                   <Link className='w-full md:w-1/2 lg:w-1/3 h-[60vh] border-2 border-red-500 m-auto group transition-all duration-700 odd:bg-fuchsia-100 even:bg-fuchsia-200' key={item.id} 
-                  href={`/burgers/${item.id}`}
+                  href={`https://aesthetic-mousse-aa4e71.netlify.app/burgers/${item.id}`}
                   
                   >
     
@@ -76,7 +76,7 @@ function MenuCategoryPage({params}) {
               pastas.map((item)=>{
                 return(
                   <Link className='w-full md:w-1/2 lg:w-1/3 h-[60vh] border-2 border-red-500 m-auto group transition-all duration-700 odd:bg-fuchsia-100 even:bg-fuchsia-200' 
-                  key={item.id} href={`/pastas/${item.id}`}
+                  key={item.id} href={`https://aesthetic-mousse-aa4e71.netlify.app/pastas/${item.id}`}
                   >
     
                   {/**Image */}

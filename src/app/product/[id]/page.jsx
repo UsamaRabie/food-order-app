@@ -22,7 +22,6 @@ function SingleProductPage({params}) {
       <div>
         <h1 className='font-bold text-4xl text-center mb-5'>{pizzas[params.id-1].title}</h1>
         <p className='text-center mb-5'>{pizzas[params.id-1].desc}</p>
-      
       </div>
     </div>
     
@@ -42,7 +41,6 @@ function SingleProductPage({params}) {
       <div>
         <h1 className='font-bold text-4xl text-center mb-5'>{burgers[params.id-1].title}</h1>
         <p className='text-center mb-5'>{burgers[params.id-1].desc}</p>
-      
       </div>
     </div>
     
@@ -63,7 +61,6 @@ function SingleProductPage({params}) {
       <div>
         <h1 className='font-bold text-4xl text-center mb-5'>{pastas[params.id-1].title}</h1>
         <p className='text-center mb-5'>{pastas[params.id-1].desc}</p>
-      
       </div>
     </div>
     
