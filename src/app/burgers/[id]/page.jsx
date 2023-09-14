@@ -11,7 +11,6 @@ function BurgerPage({params}) {
   const [quantity , setQuantity]=useState(1)
   const [selected , setSelected]=useState(0)
   const cart = useSelector(state=>state.cart)
-  localStorage.setItem('cart', JSON.stringify(cart));
   const dispatch = useDispatch()
   const item = burgers[params.id-1] 
   const totPrice = ((burgers[params.id-1].price + burgers[params.id-1].options[selected].additionalPrice )* quantity ).toFixed(2)
@@ -49,18 +48,37 @@ function BurgerPage({params}) {
       </div>
 
       {/** Quantity container */}
-      <div className='flex border-2 border-slate-400 rounded-md items-center m-5 '>
-        <div className='flex flex-1 items-center justify-between'>
-          <span className='font-bold'>Quantity</span>
-
-          <div>
-            <button  onClick={()=>setQuantity((prev)=> prev>1? prev-1:1)} className='text-lg font-bold hover:text-2xl'> {"<"} </button>
-            <span className='text-lg hover:text-2xl font-bold'>{quantity}</span>
-            <button onClick={()=>setQuantity((prev)=>prev+1)} className='text-lg font-bold hover:text-2xl'> {">"} </button>
+      <div className="flex justify-between items-center">
+        {/* Quantity */}
+        <div className="flex justify-between w-full p-3 ring-1 ring-red-500 rounded-l-md rounded-r-sm">
+          <span>Quantity</span>
+          <div className="flex gap-5 items-center">
+            <button 
+              onClick={() => {
+                if(quantity>1)
+                setQuantity(quantity - 1);
+              }}
+            >
+              {"<"}
+            </button>
+            <span>{quantity}</span>
+            <button
+              onClick={() => {
+               
+                setQuantity(quantity + 1);
+              }}
+            >
+              {">"}
+            </button>
           </div>
         </div>
-        {/**Add to cart button */}
-        <button onClick={()=>dispatch(addToCart({item , quantity , totPrice} ))} className='flex-2 bg-red-500 p-2 text-md text-white w-1/5 hover:bg-red-600 hover:text-lg transition-all duration-700'>Add to cart</button>
+
+        {/* Add */}
+
+        <div className="uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500 text-center hover:bg-red-600 rounded-r-full transition-all duration-300">
+          
+          <button className="" onClick={()=>dispatch(addToCart({item,quantity,totPrice}))}>Add To Cart</button>
+        </div>
       </div>
 
     

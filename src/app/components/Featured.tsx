@@ -27,7 +27,7 @@ const Featured = () => {
               <span className="text-xl font-bold">${item.price}</span>
               <button className="bg-red-500 text-white p-2 rounded-md  hover:bg-red-600 hover:text-xl transition-all duration-700">
                 
-                <Link href="https://aesthetic-mousse-aa4e71.netlify.app/menu">go to menu</Link>
+                <Link href="/menu">go to menu</Link>
               </button>
             </div>
           </div>

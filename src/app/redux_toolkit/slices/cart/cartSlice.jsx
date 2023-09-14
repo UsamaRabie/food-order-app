@@ -10,7 +10,6 @@ export const cartSlice= createSlice({
         if(!findProduct){
           return [...state , action.payload ]
         }
-        localStorage.setItem('cartItems', JSON.stringify(state));
         
       },
        deleteFromCart: (state, action) => {

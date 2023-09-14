@@ -36,7 +36,7 @@ const LoginPage = () => {
             <span>Sign in with Facebook</span>
           </button>
           <p className="text-sm">
-            Have a problem?<Link className="underline" href="https://aesthetic-mousse-aa4e71.netlify.app/"> Contact us</Link>
+            Have a problem?<Link className="underline" href="/"> Contact us</Link>
           </p>
         </div>
       </div>

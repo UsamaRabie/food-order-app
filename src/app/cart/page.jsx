@@ -4,7 +4,7 @@ import React from "react";
 import { useSelector , useDispatch} from 'react-redux'
 import { deleteFromCart , clearCart } from "../redux_toolkit/slices/cart/cartSlice";
 const CartPage = () => {
-   const cart = localStorage.key(1)
+  const cart = useSelector(state=>state.cart)
   const dispatch = useDispatch()
   let myPrice = 0;
   let myQuantity = 0;
@@ -23,7 +23,6 @@ const CartPage = () => {
 } ;
   {/** call function every rendering */}
 
-
   return (
     <div className="h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col  text-red-500 lg:flex-row">
       {/* PRODUCTS CONTAINER */}
@@ -40,15 +39,15 @@ const CartPage = () => {
             </tr>
           </thead>
           <tbody>
-          { cart.length!==0 && (cart.map((cartItems , index)=>{
+          { cart.length!==0 && (cart.map((cart , index)=>{
         return(
             <tr key={index}
               className=" border-b transition duration-300 ease-in-out hover:bg-red-500 dark:border-neutral-500 dark:hover:bg-red-100">
               <td className="text-center whitespace-nowrap  py-4 font-medium hidden md:inline-block"><Image src={cart.item.img} alt="" width={120} height={120} className="hover:rotate-45 transition-all duration-1000  " /></td>
-              <td className=" text-center py-4 font-bold">{cartItems.item.title}</td>
-              <td className="text-center font-bold whitespace-nowrap mx-5  py-4">{cartItems.totPrice}</td>
-              <td className="text-center  font-bold whitespace-nowrap mx-5  py-4">{cartItems.quantity}</td>
-              <td className="text-center  font-bold whitespace-nowrap mx-5 py-4"><span onClick={()=>dispatch(deleteFromCart(cartItems.item))} className="cursor-pointer hover:text-red-700 hover:text-lg">X</span></td>
+              <td className=" text-center py-4 font-bold">{cart.item.title}</td>
+              <td className="text-center font-bold whitespace-nowrap mx-5  py-4">{cart.totPrice}</td>
+              <td className="text-center  font-bold whitespace-nowrap mx-5  py-4">{cart.quantity}</td>
+              <td className="text-center  font-bold whitespace-nowrap mx-5 py-4"><span onClick={()=>dispatch(deleteFromCart(cart.item))} className="cursor-pointer hover:text-red-700 hover:text-lg">X</span></td>
             </tr>
                 )
               }))}
