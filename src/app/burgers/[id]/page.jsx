@@ -11,6 +11,7 @@ function BurgerPage({params}) {
   const [quantity , setQuantity]=useState(1)
   const [selected , setSelected]=useState(0)
   const cart = useSelector(state=>state.cart)
+  localStorage.setItem('cart', JSON.stringify(cart));
   const dispatch = useDispatch()
   const item = burgers[params.id-1] 
   const totPrice = ((burgers[params.id-1].price + burgers[params.id-1].options[selected].additionalPrice )* quantity ).toFixed(2)

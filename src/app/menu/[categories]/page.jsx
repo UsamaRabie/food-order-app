@@ -14,6 +14,8 @@ function MenuCategoryPage({params}) {
   const [quantity , setQuantity]=useState(1)
   const [selected , setSelected]=useState(0)
   const cart = useSelector(state=>state.cart)
+  localStorage.setItem('cart', JSON.stringify(cart));
+
   const dispatch = useDispatch()
   return (
     <> 

@@ -4,7 +4,6 @@ import React from "react";
 import { useSelector , useDispatch} from 'react-redux'
 import { deleteFromCart , clearCart } from "../redux_toolkit/slices/cart/cartSlice";
 const CartPage = () => {
-  
   const cart = useSelector(state => state.cart);
   localStorage.setItem('cart', JSON.stringify(cart));
   const dispatch = useDispatch()
@@ -24,6 +23,7 @@ const CartPage = () => {
     return Number (myQuantity);
 } ;
   {/** call function every rendering */}
+
 
   return (
     <div className="h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col  text-red-500 lg:flex-row">
