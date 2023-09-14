@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/burgers/[id]/page.jsx", "src/app/cart/page.jsx", "src/app/components/Navbar.jsx", "src/app/menu/[categories]/page.jsx", "src/app/pastas/[id]/page.jsx", "src/app/pizzas/[id]/page.jsx", "src/app/product/[id]/page.jsx", "src/app/redux_toolkit/slices/cart/cartSlice.jsx"],
+  "exclude": ["node_modules"]
+}
