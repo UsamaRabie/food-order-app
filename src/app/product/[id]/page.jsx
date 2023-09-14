@@ -1,4 +1,3 @@
-import Price from '@/app/components/Price'
 import { pizzas , pastas , burgers } from '@/app/components/data'
 import Image from 'next/image'
 import React from 'react'
