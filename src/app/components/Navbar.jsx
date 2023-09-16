@@ -49,8 +49,8 @@ function Navbar() {
       </div>
       </div>
         {/* nav items in mobile view*/}
-         <div className=' md:hidden'>
-          {open&&(<MenuItems/>)}
+         <div className='md:hidden'>
+          {open&&(<MenuItems open={open} setOpen={setOpen}/>)}
           
           </div>
         
